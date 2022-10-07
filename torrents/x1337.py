@@ -1,9 +1,11 @@
-# import asyncio
+import asyncio
 import re
 import time
+
 import aiohttp
 from bs4 import BeautifulSoup
-# from helper.asyncioPoliciesFix import decorator_asyncio_fix
+
+from helper.asyncioPoliciesFix import decorator_asyncio_fix
 from helper.html_scraper import Scraper
 
 
@@ -88,8 +90,8 @@ class x1337:
                                 "uploader": uploader,
                             }
                         )
-                        if len(my_dict["data"]) == self.LIMIT:
-                           break
+                    if len(my_dict["data"]) == self.LIMIT:
+                        break
                 try:
                     pages = soup.select(".pagination li a")
                     my_dict["current_page"] = int(pages[0].text)
