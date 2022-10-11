@@ -120,7 +120,7 @@ def check_if_site_available(site):
             "recent_available": True,
             "recent_category_available": True,
             "categories": ["tv"],
-            "limit": 50,
+            "limit": 100,
         },
         "bitsearch": {
             "website": Bitsearch,
